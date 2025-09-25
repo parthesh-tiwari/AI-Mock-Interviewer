@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Brain, Menu, X } from "lucide-react";
 
 function Header() {
+  
   const path = usePathname();
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

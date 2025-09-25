@@ -43,7 +43,7 @@ function InterviewItemCard({ interview, onDelete }) {
       if (response.ok) {
         toast.success('Interview deleted successfully');
         setShowDeleteModal(false);
-        // Call the parent's onDelete function to refresh the list
+
         if (onDelete) {
           onDelete();
         }
@@ -101,12 +101,13 @@ function InterviewItemCard({ interview, onDelete }) {
         </div>
       </div>
 
-      {/* Delete Confirmation Modal */}
+    
       {showDeleteModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-screen overflow-y-auto">
             <div className="p-6">
-              {/* Header */}
+
+
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
@@ -122,7 +123,7 @@ function InterviewItemCard({ interview, onDelete }) {
                 </button>
               </div>
 
-              {/* Content */}
+          
               <div className="mb-6">
                 <p className="text-gray-600 mb-4">
                   Are you sure you want to delete this interview?
@@ -137,7 +138,8 @@ function InterviewItemCard({ interview, onDelete }) {
                 </p>
               </div>
 
-              {/* Action Buttons */}
+
+
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   variant="outline"

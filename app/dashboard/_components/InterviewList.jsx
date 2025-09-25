@@ -13,11 +13,11 @@ function InterviewList() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (user) GetInterviewList();
+    if (user) getInterviewList();
     // eslint-disable-next-line
   }, [user]);
 
-  const GetInterviewList = async () => {
+  const getInterviewList = async () => {
     try {
       setIsLoading(true);
       const result = await db.select()
@@ -34,8 +34,7 @@ function InterviewList() {
   }
 
   const handleInterviewDelete = () => {
-    // Refresh the interview list after deletion
-    GetInterviewList();
+    getInterviewList();
   };
 
   if (isLoading) {
